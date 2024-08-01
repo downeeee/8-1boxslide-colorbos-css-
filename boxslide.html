@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/">
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script lang="java">
+        $(function(){
+            $(".box_slide").bxSlider({auto:true,mode:"fade",controls:true,pager:true,speed:500,autoControls:true})
+        })
+    </script>
+
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        a{text-decoration: none; color: inherit;}
+        ul,li{list-style: none;}
+
+        .wrap{width: 600px; height: 400px;margin: 100px auto; border: 1px solid red;}
+
+        .wrap .box_slide{}
+        .wrap .box_slide li{}
+        .wrap .box_slide li >div{height:400px; background-size: cover; background-position: center center; background-repeat: no-repeat;}
+        .wrap .box_slide li div >h1{position: absolute ;width: 200px; height: 100px; line-height: 100px; text-align: center; background-color: rgba(255, 255, 255, 0.5);top: 50%; transform: translateY(-50%);}
+        .wrap .box_slide li.s_01 >div h1{left: 100px;}
+        .wrap .box_slide li.s_02 >div h1{left: calc(50%-100px);}
+        .wrap .box_slide li.s_03 >div h1{right: 100px;}
+        .wrap .box_slide li.s_04 >div h1{right: calc(50%-100px);}
+        .wrap .box_slide li.s_05 >div h1{}
+        .wrap .box_slide li.s_01 >div{background-image: url(images/animal01.png);}
+        .wrap .box_slide li.s_02 >div{background-image: url(images/animal02.png);}
+        .wrap .box_slide li.s_03 >div{background-image: url(images/animal03.png);}
+        .wrap .box_slide li.s_04 >div{background-image: url(images/animal04.png);}
+        .wrap .box_slide li.s_05 >div{background-image: url(images/animal05.png);}
+
+        .wrap .bx-controls-direction >a{display: block; width: 50px; height: 100px; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 50px; 
+                                    transform: translateY(-50%);text-align: center; line-height: 100px; text-decoration: none; color: white; z-index: 50;}
+        .wrap .bx-controls-direction >a.bx-active{}
+        .wrap .bx-controls-direction >a.bx-prev{}
+        .wrap .bx-controls-direction >a.bx-next{right: 0;}
+
+        .wrap .bx-pager >div{}
+        .wrap .bx-pager >div >a{}
+        .wrap .bx-pager >div >a.active{}
+
+        .wrap .bx-controls-auto>div{}
+        .wrap .bx-controls-auto>div>a{}
+        .wrap .bx-controls-auto>div>a.active{}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="box_slide">
+            <li class="s_01">
+                <div><h1>title01</h1></div>
+            </li>
+            <li class="s_02">
+                <div><h1>title02</h1></div>
+            </li>
+            <li class="s_03">
+                <div><h1>title03</h1></div>
+            </li>
+            <li class="s_04">
+                <div><h1>title04</h1></div>
+            </li>
+            <li class="s_05">
+                <div><h1>title05</h1></div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
